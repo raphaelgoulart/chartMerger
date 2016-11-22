@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace chartMerger {
@@ -47,408 +48,68 @@ namespace chartMerger {
                             line = file.ReadLine();
                         }
                     }
-                    if(line == "[EasySingle]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.single[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumSingle]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.single[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardSingle]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.single[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertSingle]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.single[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyDoubleGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleGuitar[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumDoubleGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleGuitar[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardDoubleGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleGuitar[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertDoubleGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleGuitar[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyDoubleBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleBass[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumDoubleBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleBass[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardDoubleBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleBass[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertDoubleBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleBass[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyEnhancedGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.enhancedGuitar[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumEnhancedGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.enhancedGuitar[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardEnhancedGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.enhancedGuitar[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertEnhancedGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.enhancedGuitar[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyCoopLead]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopLead[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumCoopLead]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopLead[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardCoopLead]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopLead[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertCoopLead]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopLead[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyCoopBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopBass[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumCoopBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopBass[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardCoopBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopBass[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertCoopBass]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.coopBass[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[Easy10KeyGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.tenKeyGuitar[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[Medium10KeyGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.tenKeyGuitar[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[Hard10KeyGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.tenKeyGuitar[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[Expert10KeyGuitar]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.tenKeyGuitar[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.drums[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.drums[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.drums[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.drums[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyDoubleDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleDrums[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumDoubleDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleDrums[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardDoubleDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleDrums[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertDoubleDrums]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.doubleDrums[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyVocals]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.vocals[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumVocals]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.vocals[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardVocals]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.vocals[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertVocals]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.vocals[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[EasyKeyboard]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.keyboard[0].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[MediumKeyboard]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.keyboard[1].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[HardKeyboard]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.keyboard[2].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
-                    if(line == "[ExpertKeyboard]") {
-                        line = file.ReadLine();
-                        line = file.ReadLine();
-                        while(line != "}") {
-                            var tmp = line.Split('=');
-                            s.keyboard[3].Add(CreateEvent(tmp));
-                            line = file.ReadLine();
-                        }
-                    }
+                    if(line == "[EasySingle]") s.single[0] = ReadDiff(line,file);
+                    if(line == "[MediumSingle]") s.single[1] = ReadDiff(line,file);
+                    if(line == "[HardSingle]") s.single[2] = ReadDiff(line,file);
+                    if(line == "[ExpertSingle]") s.single[3] = ReadDiff(line,file);
+                    if(line == "[EasyDoubleGuitar]") s.doubleGuitar[0] = ReadDiff(line,file);
+                    if(line == "[MediumDoubleGuitar]") s.doubleGuitar[1] = ReadDiff(line,file);
+                    if(line == "[HardDoubleGuitar]") s.doubleGuitar[2] = ReadDiff(line,file);
+                    if(line == "[ExpertDoubleGuitar]") s.doubleGuitar[3] = ReadDiff(line,file);
+                    if(line == "[EasyDoubleBass]") s.doubleBass[0] = ReadDiff(line,file);
+                    if(line == "[MediumDoubleBass]") s.doubleBass[1] = ReadDiff(line,file);
+                    if(line == "[HardDoubleBass]") s.doubleBass[2] = ReadDiff(line,file);
+                    if(line == "[ExpertDoubleBass]") s.doubleBass[3] = ReadDiff(line,file);
+                    if(line == "[EasyEnhancedGuitar]") s.enhancedGuitar[0] = ReadDiff(line,file);
+                    if(line == "[MediumEnhancedGuitar]") s.enhancedGuitar[1] = ReadDiff(line,file);
+                    if(line == "[HardEnhancedGuitar]") s.enhancedGuitar[2] = ReadDiff(line,file);
+                    if(line == "[ExpertEnhancedGuitar]") s.enhancedGuitar[3] = ReadDiff(line,file);
+                    if(line == "[EasyCoopLead]") s.coopLead[0] = ReadDiff(line,file);
+                    if(line == "[MediumCoopLead]") s.coopLead[1] = ReadDiff(line,file);
+                    if(line == "[HardCoopLead]") s.coopLead[2] = ReadDiff(line,file);
+                    if(line == "[ExpertCoopLead]") s.coopLead[3] = ReadDiff(line,file);
+                    if(line == "[EasyCoopBass]") s.coopBass[0] = ReadDiff(line,file);
+                    if(line == "[MediumCoopBass]") s.coopBass[1] = ReadDiff(line,file);
+                    if(line == "[HardCoopBass]") s.coopBass[2] = ReadDiff(line,file);
+                    if(line == "[ExpertCoopBass]") s.coopBass[3] = ReadDiff(line,file);
+                    if(line == "[Easy10KeyGuitar]") s.tenKeyGuitar[0] = ReadDiff(line,file);
+                    if(line == "[Medium10KeyGuitar]") s.tenKeyGuitar[1] = ReadDiff(line,file);
+                    if(line == "[Hard10KeyGuitar]") s.tenKeyGuitar[2] = ReadDiff(line,file);
+                    if(line == "[Expert10KeyGuitar]") s.tenKeyGuitar[3] = ReadDiff(line,file);
+                    if(line == "[EasyDrums]") s.drums[0] = ReadDiff(line,file);
+                    if(line == "[MediumDrums]") s.drums[1] = ReadDiff(line,file);
+                    if(line == "[HardDrums]") s.drums[2] = ReadDiff(line,file);
+                    if(line == "[ExpertDrums]") s.drums[3] = ReadDiff(line,file);
+                    if(line == "[EasyDoubleDrums]") s.doubleDrums[0] = ReadDiff(line,file);
+                    if(line == "[MediumDoubleDrums]") s.doubleDrums[1] = ReadDiff(line,file);
+                    if(line == "[HardDoubleDrums]") s.doubleDrums[2] = ReadDiff(line,file);
+                    if(line == "[ExpertDoubleDrums]") s.doubleDrums[3] = ReadDiff(line,file);
+                    if(line == "[EasyVocals]") s.vocals[0] = ReadDiff(line,file);
+                    if(line == "[MediumVocals]") s.vocals[1] = ReadDiff(line,file);
+                    if(line == "[HardVocals]") s.vocals[2] = ReadDiff(line,file);
+                    if(line == "[ExpertVocals]") s.vocals[3] = ReadDiff(line,file);
+                    if(line == "[EasyKeyboard]") s.keyboard[0] = ReadDiff(line,file);
+                    if(line == "[MediumKeyboard]") s.keyboard[1] = ReadDiff(line,file);
+                    if(line == "[HardKeyboard]") s.keyboard[2] = ReadDiff(line,file);
+                    if(line == "[ExpertKeyboard]") s.keyboard[3] = ReadDiff(line,file);
                 } catch(Exception e) {
                     if(line != "}") Console.WriteLine("Error parsing line {0} - ignoring it",line);
                 }
                 
             }
             return s;
+        }
+
+        private static List<Event> ReadDiff(string line,StreamReader file) {
+            List <Event> diff = new List<Event>();
+            line = file.ReadLine();
+            line = file.ReadLine();
+            while(line != "}") {
+                var tmp = line.Split('=');
+                diff.Add(CreateEvent(tmp));
+                line = file.ReadLine();
+            }
+            return diff;
         }
 
         private static Event CreateEvent(string[] tmp) {
