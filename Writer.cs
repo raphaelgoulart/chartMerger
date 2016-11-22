@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -37,359 +37,62 @@ namespace chartMerger {
                         file.WriteLine("\t" + e.tick + " = " + e.data);
                     }
                     file.WriteLine("}");
-                    if(s.single[0].Count > 0) {
-                        file.WriteLine("[EasySingle]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.single[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.single[1].Count > 0) {
-                        file.WriteLine("[MediumSingle]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.single[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.single[2].Count > 0) {
-                        file.WriteLine("[HardSingle]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.single[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.single[3].Count > 0) {
-                        file.WriteLine("[ExpertSingle]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.single[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleGuitar[0].Count > 0) {
-                        file.WriteLine("[EasyDoubleGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleGuitar[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleGuitar[1].Count > 0) {
-                        file.WriteLine("[MediumDoubleGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleGuitar[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleGuitar[2].Count > 0) {
-                        file.WriteLine("[HardDoubleGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleGuitar[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleGuitar[3].Count > 0) {
-                        file.WriteLine("[ExpertDoubleGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleGuitar[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleBass[0].Count > 0) {
-                        file.WriteLine("[EasyDoubleBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleBass[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleBass[1].Count > 0) {
-                        file.WriteLine("[MediumDoubleBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleBass[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleBass[2].Count > 0) {
-                        file.WriteLine("[HardDoubleBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleBass[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleBass[3].Count > 0) {
-                        file.WriteLine("[ExpertDoubleBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleBass[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.enhancedGuitar[0].Count > 0) {
-                        file.WriteLine("[EasyEnhancedGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.enhancedGuitar[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.enhancedGuitar[1].Count > 0) {
-                        file.WriteLine("[MediumEnhancedGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.enhancedGuitar[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.enhancedGuitar[2].Count > 0) {
-                        file.WriteLine("[HardEnhancedGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.enhancedGuitar[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.enhancedGuitar[3].Count > 0) {
-                        file.WriteLine("[ExpertEnhancedGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.enhancedGuitar[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopLead[0].Count > 0) {
-                        file.WriteLine("[EasyCoopLead]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopLead[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopLead[1].Count > 0) {
-                        file.WriteLine("[MediumCoopLead]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopLead[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopLead[2].Count > 0) {
-                        file.WriteLine("[HardCoopLead]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopLead[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopLead[3].Count > 0) {
-                        file.WriteLine("[ExpertCoopLead]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopLead[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopBass[0].Count > 0) {
-                        file.WriteLine("[EasyCoopBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopBass[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopBass[1].Count > 0) {
-                        file.WriteLine("[MediumCoopBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopBass[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopBass[2].Count > 0) {
-                        file.WriteLine("[HardCoopBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopBass[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.coopBass[3].Count > 0) {
-                        file.WriteLine("[ExpertCoopBass]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.coopBass[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.tenKeyGuitar[0].Count > 0) {
-                        file.WriteLine("[Easy10KeyGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.tenKeyGuitar[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.tenKeyGuitar[1].Count > 0) {
-                        file.WriteLine("[Medium10KeyGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.tenKeyGuitar[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.tenKeyGuitar[2].Count > 0) {
-                        file.WriteLine("[Hard10KeyGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.tenKeyGuitar[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.tenKeyGuitar[3].Count > 0) {
-                        file.WriteLine("[Expert10KeyGuitar]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.tenKeyGuitar[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.drums[0].Count > 0) {
-                        file.WriteLine("[EasyDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.drums[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.drums[1].Count > 0) {
-                        file.WriteLine("[MediumDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.drums[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.drums[2].Count > 0) {
-                        file.WriteLine("[HardDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.drums[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.drums[3].Count > 0) {
-                        file.WriteLine("[ExpertDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.drums[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleDrums[0].Count > 0) {
-                        file.WriteLine("[EasyDoubleDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleDrums[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleDrums[1].Count > 0) {
-                        file.WriteLine("[MediumDoubleDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleDrums[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleDrums[2].Count > 0) {
-                        file.WriteLine("[HardDoubleDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleDrums[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.doubleDrums[3].Count > 0) {
-                        file.WriteLine("[ExpertDoubleDrums]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.doubleDrums[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.vocals[0].Count > 0) {
-                        file.WriteLine("[EasyVocals]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.vocals[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.vocals[1].Count > 0) {
-                        file.WriteLine("[MediumVocals]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.vocals[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.vocals[2].Count > 0) {
-                        file.WriteLine("[HardVocals]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.vocals[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.vocals[3].Count > 0) {
-                        file.WriteLine("[ExpertVocals]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.vocals[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.keyboard[0].Count > 0) {
-                        file.WriteLine("[EasyKeyboard]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.keyboard[0]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.keyboard[1].Count > 0) {
-                        file.WriteLine("[MediumKeyboard]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.keyboard[1]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.keyboard[2].Count > 0) {
-                        file.WriteLine("[HardKeyboard]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.keyboard[2]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
-                    if(s.keyboard[3].Count > 0) {
-                        file.WriteLine("[ExpertKeyboard]");
-                        file.WriteLine("{");
-                        foreach(Event e in s.keyboard[3]) {
-                            file.WriteLine("\t" + e.tick + " = " + e.data);
-                        }
-                        file.WriteLine("}");
-                    }
+                    WriteDiff(file,s.single[0],"[EasySingle]");
+                    WriteDiff(file,s.single[1],"[MediumSingle]");
+                    WriteDiff(file,s.single[2],"[HardSingle]");
+                    WriteDiff(file,s.single[3],"[ExpertSingle]");
+                    WriteDiff(file,s.doubleGuitar[0],"[EasyDoubleGuitar]");
+                    WriteDiff(file,s.doubleGuitar[1],"[MediumDoubleGuitar]");
+                    WriteDiff(file,s.doubleGuitar[2],"[HardDoubleGuitar]");
+                    WriteDiff(file,s.doubleGuitar[3],"[ExpertDoubleGuitar]");
+                    WriteDiff(file,s.doubleBass[0],"[EasyDoubleBass]");
+                    WriteDiff(file,s.doubleBass[1],"[MediumDoubleBass]");
+                    WriteDiff(file,s.doubleBass[2],"[HardDoubleBass]");
+                    WriteDiff(file,s.doubleBass[3],"[ExpertDoubleBass]");
+                    WriteDiff(file,s.enhancedGuitar[0],"[EasyEnhancedGuitar]");
+                    WriteDiff(file,s.enhancedGuitar[1],"[MediumEnhancedGuitar]");
+                    WriteDiff(file,s.enhancedGuitar[2],"[HardEnhancedGuitar]");
+                    WriteDiff(file,s.enhancedGuitar[3],"[ExpertEnhancedGuitar]");
+                    WriteDiff(file,s.coopLead[0],"[EasyCoopLead]");
+                    WriteDiff(file,s.coopLead[1],"[MediumCoopLead]");
+                    WriteDiff(file,s.coopLead[2],"[HardCoopLead]");
+                    WriteDiff(file,s.coopLead[3],"[ExpertCoopLead]");
+                    WriteDiff(file,s.coopBass[0],"[EasyCoopBass]");
+                    WriteDiff(file,s.coopBass[1],"[MediumCoopBass]");
+                    WriteDiff(file,s.coopBass[2],"[HardCoopBass]");
+                    WriteDiff(file,s.coopBass[3],"[ExpertCoopBass]");
+                    WriteDiff(file,s.tenKeyGuitar[0],"[Easy10KeyGuitar]");
+                    WriteDiff(file,s.tenKeyGuitar[1],"[Medium10KeyGuitar]");
+                    WriteDiff(file,s.tenKeyGuitar[2],"[Hard10KeyGuitar]");
+                    WriteDiff(file,s.tenKeyGuitar[3],"[Expert10KeyGuitar]");
+                    WriteDiff(file,s.drums[0],"[EasyDrums]");
+                    WriteDiff(file,s.drums[1],"[MediumDrums]");
+                    WriteDiff(file,s.drums[2],"[HardDrums]");
+                    WriteDiff(file,s.drums[3],"[ExpertDrums]");
+                    WriteDiff(file,s.doubleDrums[0],"[EasyDoubleDrums]");
+                    WriteDiff(file,s.doubleDrums[1],"[MediumDoubleDrums]");
+                    WriteDiff(file,s.doubleDrums[2],"[HardDoubleDrums]");
+                    WriteDiff(file,s.doubleDrums[3],"[ExpertDoubleDrums]");
+                    WriteDiff(file,s.vocals[0],"[EasyVocals]");
+                    WriteDiff(file,s.vocals[1],"[MediumVocals]");
+                    WriteDiff(file,s.vocals[2],"[HardVocals]");
+                    WriteDiff(file,s.vocals[3],"[ExpertVocals]");
+                    WriteDiff(file,s.keyboard[0],"[EasyKeyboard]");
+                    WriteDiff(file,s.keyboard[1],"[MediumKeyboard]");
+                    WriteDiff(file,s.keyboard[2],"[HardKeyboard]");
+                    WriteDiff(file,s.keyboard[3],"[ExpertKeyboard]");
                 }
+            }
+        }
+
+        private static void WriteDiff(StreamWriter file,List<Event> diff,string diffName) {
+            if(diff.Count > 0) {
+                file.WriteLine(diffName);
+                file.WriteLine("{");
+                foreach(Event e in diff) {
+                    file.WriteLine("\t" + e.tick + " = " + e.data);
+                }
+                file.WriteLine("}");
             }
         }
     }
