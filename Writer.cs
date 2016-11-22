@@ -21,9 +21,6 @@ namespace chartMerger {
                     file.WriteLine("\tPreviewEnd = 0.00");
                     file.WriteLine("\tGenre = \"rock\"");
                     file.WriteLine("\tMediaType = \"cd\"");
-                    file.WriteLine("\tMusicStream = \"song.ogg\"");
-                    file.WriteLine("\tGuitarStream = \"guitar.ogg\"");
-                    file.WriteLine("\tBassStream = \"rhythm.ogg\"");
                     file.WriteLine("}");
                     file.WriteLine("[SyncTrack]");
                     file.WriteLine("{");
