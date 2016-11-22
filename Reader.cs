@@ -26,7 +26,9 @@ namespace chartMerger {
                         line = file.ReadLine();
                         while(line != "}") {
                             var tmp = line.Split('=');
-                            s.sync.Add(CreateEvent(tmp));
+                            if (tmp[1].Trim().Split(' ')[0] != "A") {
+                                s.sync.Add(CreateEvent(tmp));
+                            }
                             line = file.ReadLine();
                         }
                     }
