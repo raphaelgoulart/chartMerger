@@ -142,6 +142,7 @@ namespace chartMerger {
 
         private static string FixSustain(string data,long tick,long end) {
             var tmp = data.Split(' ');
+            if(tmp.Length < 3) return data;
             long sus = Convert.ToInt64(tmp[2]);
             if(tick + sus > end) {
                 sus = sus - (tick + sus - end);
